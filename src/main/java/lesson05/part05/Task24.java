@@ -27,6 +27,10 @@ package lesson05.part05;
 
 public class Task24 {
     static {
+        init();
+    }
+
+    static {
         System.out.println("Static block");
     }
 
@@ -38,10 +42,6 @@ public class Task24 {
     public int i = 6;
 
     public String name = "First name";
-
-    static {
-        init();
-    }
 
     public Task24() {
         System.out.println("Solution constructor");
@@ -59,7 +59,7 @@ public class Task24 {
 
     public static void printAllFields(Task24 obj) {
         System.out.println("static void printAllFields");
-        System.out.println(obj.name);
         System.out.println(obj.i);
+        System.out.println(obj.name);
     }
 }

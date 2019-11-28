@@ -17,7 +17,17 @@ package lesson05.part05;
 */
 
 public class Task18 {
-  //  public static Cat cat;
+    public static Cat cat;
+
+    static {
+        cat = new Cat();
+        cat.name = "Мурзик";
+        System.out.println(cat.name);
+    }
+
+    public static class Cat{
+        public String name;
+    }
 
     public static void main(String[] args) {
 

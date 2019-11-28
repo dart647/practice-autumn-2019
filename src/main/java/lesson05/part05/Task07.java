@@ -1,5 +1,8 @@
 package lesson05.part05;
 
+import java.sql.Time;
+import java.util.Date;
+
 /**
  * ООП - Перегрузка
  * Перегрузите метод printMatrix 8 различными способами. В итоге должно получиться 10 различных методов printMatrix.
@@ -18,6 +21,46 @@ public class Task07 {
     }
 
     public static void printMatrix(int m, int n, String value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, double value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, int value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, char value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, short value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, Integer value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, Double value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, Date value) {
+        System.out.println("Заполняем объектами String");
+        printMatrix(m, n, (Object) value);
+    }
+
+    public static void printMatrix(int m, int n, Time value) {
         System.out.println("Заполняем объектами String");
         printMatrix(m, n, (Object) value);
     }

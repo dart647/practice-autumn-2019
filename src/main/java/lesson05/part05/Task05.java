@@ -50,7 +50,7 @@ public class Task05 {
     }
 
     public interface LivingPart {
-        boolean containsBones();
+        Object containsBones();
     }
 
     public static class BodyPart implements LivingPart {
@@ -60,12 +60,12 @@ public class Task05 {
             this.name = name;
         }
 
-        public boolean containsBones() {
-            return true;
+        public Object containsBones() {
+            return "Yes";
         }
 
         public String toString() {
-            return containsBones() ? name + " содержит кости" : name + " не содержит кости";
+            return containsBones().equals("Yes") ? name + " содержит кости" : name + " не содержит кости";
         }
     }
 
@@ -77,8 +77,8 @@ public class Task05 {
             this.isArtificial = isArtificial;
         }
 
-        public boolean containsBones() {
-            return super.containsBones() && !isArtificial;
+        public Object containsBones() {
+            return super.containsBones().equals("Yes") && !isArtificial ? "Yes":"No";
         }
     }
 }

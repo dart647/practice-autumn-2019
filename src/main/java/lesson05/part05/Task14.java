@@ -16,7 +16,15 @@ import java.util.Map;
  */
 
 public class Task14 {
-    public static Map<Double, String> labels = new HashMap<Double, String>();
+    public static Map<Double, String> labels;
+    static {
+        labels = new HashMap<Double, String>();
+        labels.put(1d,"1");
+        labels.put(2d,"2");
+        labels.put(3d,"3");
+        labels.put(4d,"4");
+        labels.put(5d,"5");
+    }
 
     public static void main(String[] args) {
         System.out.println(labels);

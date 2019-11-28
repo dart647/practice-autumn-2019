@@ -27,21 +27,36 @@ package lesson05.part05;
 
 public class Task03 {
     public static void main(String[] args) {
-        //    new Task03.LuxuriousCar().printlnDesire();
-        //    new Task03.CheapCar().printlnDesire();
+        new Task03.LuxuriousCar().printlnDesire();
+        new Task03.CheapCar().printlnDesire();
         new Task03.Ferrari().printlnDesire();
         new Task03.Lanos().printlnDesire();
     }
 
-    public static class Ferrari {
-        public void printlnDesire() {
-            //add your code here
+    public static class LuxuriousCar{
+        protected void printlnDesire() {
+            System.out.println(Constants.WANT_STRING + Constants.LUXURIOUS_CAR);
         }
     }
 
-    public static class Lanos {
+    private static class CheapCar{
+        private void printlnDesire() {
+            System.out.println(Constants.WANT_STRING + Constants.CHEAP_CAR);
+        }
+    }
+
+    public static class Ferrari extends LuxuriousCar{
+        @Override
         public void printlnDesire() {
             //add your code here
+            System.out.println(Constants.WANT_STRING + Constants.FERRARI_NAME);
+        }
+    }
+
+    public static class Lanos extends CheapCar{
+        public void printlnDesire() {
+            //add your code here
+            System.out.println(Constants.WANT_STRING + Constants.LANOS_NAME);
         }
     }
 

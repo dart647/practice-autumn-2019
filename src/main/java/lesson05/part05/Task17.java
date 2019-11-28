@@ -29,6 +29,7 @@ public class Task17 {
 
     static {
         //throw an exception here - выбросьте эксепшн тут
+        if(true){throw new ExceptionInInitializerError();}
     }
 
     public static int B = 5;

@@ -19,22 +19,22 @@ public class Task09 {
         Woman woman = new Woman();
 
         printName(man);
-        //  printName(woman);
+        printName(woman);
     }
 
-    public static void printName(Man man) {
-
+    public static void printName(Human man) {
+        System.out.println(man);
     }
 
     public static class Human {
 
     }
 
-    public static class Man {
+    public static class Man extends Human{
 
     }
 
-    public static class Woman {
+    public static class Woman extends Human{
 
     }
 }

@@ -1,6 +1,10 @@
 package lesson05.part05;
 
+import lesson02.cw.loop.Do;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Разные методы для разных типов
@@ -26,6 +30,33 @@ import java.io.IOException;
 public class Task19 {
     public static void main(String[] args) throws IOException {
         //напиште тут ваш код
+        String value;
+        double pValue;
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        do{
+            value = in.readLine();
+            try {
+                pValue = Double.parseDouble(value);
+                if(value.contains(".")){
+                    print(pValue);
+                }
+
+                if(pValue > 0 && pValue < 128 && !value.contains(".")){
+                    print((short)pValue);
+                }
+
+                if((pValue >= 128 || pValue <= 0) && !value.contains(".")){
+                    print((int)pValue);
+                }
+                if(value.equals("exit")){
+                    break;
+                }
+            }catch (Exception e){
+                print(value);
+            }
+        }while (true);
+        in.close();
     }
 
     public static void print(Double value) {
